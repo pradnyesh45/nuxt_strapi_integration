@@ -1,0 +1,45 @@
+$body-bgColor:  #fff !default;
+$themeColor:  #8C0202!default;
+$primaryColor:  #000 !default;
+$color1: #fff !default;
+// $color2: #9B9B9B !default;
+// $color3: #B6B6B6 !default;
+
+$bgColor:   #FAFAFA !default;
+$borderColor:   #F1EEEE !default;
+$bgColor2 : #F3E6D6 !default;
+$basePd: 0 20px;
+
+
+
+$font-primaryColor:  $primaryColor !default;
+// $font-secondryColor: $color2 !default;
+
+
+$wrapper-maxWidth: 1450px !default;
+$wrapper-padding:  15px !default;
+
+$bg-spriteSize-X: 350px !default;
+$bg-spriteSize-Y: 350px !default;
+
+$text__size--default: 16 !default;
+
+$default-gutter: 15px !default;
+
+$container_MaxWidth: (
+  /* 576: 100%,
+  768: 100%, */
+  992: 960px,
+  1200: 1050px,
+  1400: 1200px,
+  1920: 1450px
+);
+
+$pdpImg-MaxWidth: (
+  768: calc(100% - 400px),
+  992: 560px,
+  1200: 645px,
+  1400: 790px,
+  1920: 980px,
+);
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sunriseIcon">
+            <g id="Oval" fill="#FFFFFF" fill-rule="nonzero">
+                <circle cx="25" cy="25" r="25"></circle>
+            </g>
+            <g id="Fill-2" transform="translate(14.000000, 13.000000)" fill="#000000">
+                <path d="M21.4984,11.3535 C21.4984,4.78437 16.7925,-0.0226968 11.0015,-2.38410883e-10 C5.21077,-0.0226968 0.5,4.78437 0.5,11.3535 L0.520846,24.4997 L4.0239,22.8488 L7.52667,24.9996 L11.0199,22.8488 L14.5131,24.9999 L18.0066,22.8491 L21.5,24.5003 L21.4984,11.3535 Z M6.43659,14.3775 C4.88755,14.0189 3.92578,12.4858 4.28851,10.9534 L9.89746,12.2525 C9.53501,13.7848 7.98535,14.7364 6.43659,14.3775 Z M15.5637,14.3775 C14.0147,14.7364 12.4653,13.7848 12.1026,12.2525 L17.7118,10.9534 C18.0743,12.4858 17.1125,14.0189 15.5637,14.3775 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

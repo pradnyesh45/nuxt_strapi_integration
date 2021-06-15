@@ -1,0 +1,388 @@
+.listingWrapper {
+  margin-top: 40px;
+  padding-bottom:80px;
+  @include breakpoint-min(calc-rem(768)) {
+    margin-top: 85px;
+  padding-bottom:150px;
+  }
+  .listingBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    @include breakpoint-min(calc-rem(768)) {
+      padding: 0 30px;
+    }
+    @include breakpoint-min(calc-rem(1040)) {
+      padding: 0 40px;
+    }
+    .filterBox {
+      flex: 0 0 100%;
+      margin-bottom: 25px;
+
+      @include breakpoint-min(calc-rem(768)) {
+
+        flex: 0 0 231px;
+        padding: 0 15px 0 0;
+        margin-bottom: 0;
+      }
+      .mainTitle {
+        font-size: calc-rem(25);
+        font-family: "Gotham-Medium";
+        margin-bottom: 0;
+        text-align: center;
+
+      }
+      .box {
+        text-align: center;
+        @include breakpoint-min(calc-rem(768)) {
+          text-align: left;
+        }
+        .title {
+          font-size: calc-rem(16);
+          text-transform: uppercase;
+          font-family: "Gotham-Medium";
+          margin-bottom: 23px;
+          letter-spacing: 1px;
+          @include breakpoint-min(calc-rem(768)) {
+            font-size: calc-rem(12);
+          }
+        }
+        .typeList {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          color: #878787;
+          white-space: nowrap;
+
+          li {
+            display: inline-block;
+            font-size: calc-rem(12);
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin: 0 15px 0 0;
+            &.active {
+              color: $primaryColor;
+              font-family: "Gotham-Medium";
+            }
+          }
+          @include breakpoint-min(calc-rem(768)) {
+            li{
+              display: block;
+              margin:0 0 25px 0;
+              text-transform: uppercase;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            }
+          }
+        }
+      }
+    }
+    .listBox {
+      flex:0 0 100%;
+      @include breakpoint-min(calc-rem(768)) {
+        flex:1;
+      }
+      .headBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin:0 -10px 30px;
+        @include breakpoint-min(calc-rem(768)) {
+          margin: 0 0 60px 0;
+        }
+        .item{
+          flex: 0 0 50%;
+          padding: 0 10px;
+          @include breakpoint-min(calc-rem(768)) {
+            flex: none;
+            padding: 0;
+          }
+        }
+        .title {
+          font-size: calc-rem(18);
+          font-family: "Gotham-Medium";
+          margin-bottom: 0;
+          white-space: nowrap;
+          @include breakpoint-min(calc-rem(768)) {
+            font-size: calc-rem(25);
+          }
+        }
+
+        .dropWraper {
+          border: 1px solid rgba(#000000, 0.1);
+          border-radius: 10px;
+          position: relative;
+
+          .dropBox {
+            position: relative;
+            font-size: calc-rem(14);
+            .selectText {
+              display: block;
+              position: relative;
+              padding: 16px 40px 13px 20px;
+
+              font-family: "Gotham-Medium";
+              font-size: calc-rem(14);
+              cursor: pointer;
+              @include breakpoint-min(calc-rem(768)) {
+                min-width: 240px;
+                padding: 16px 20px 13px;
+              }
+              .selectOption{
+                display: none;
+                font-family: "Gotham-Medium";
+              font-size: calc-rem(14);
+                @include breakpoint-min(calc-rem(768)) {
+                  display: inline-block;
+                }
+              }
+              &::after {
+                content: "";
+                background: url("~assets/images/sprite.svg") no-repeat;
+                height: 7px;
+                width: 10px;
+                position: absolute;
+                top: 25px;
+                 right: 20px;
+                transform: translate(0, -50%);
+                background-position: -52px -33px;
+                transition: .3s;
+              }
+              &.active{
+                &::after {
+                  transform: translate(0, -50%) rotate(180deg);
+
+                }
+              }
+            }
+            ul.dropList {
+              background: #f2f2f2;
+              list-style: none;
+              padding:15px 20px;
+              margin: 0;
+              border-radius: 10px;
+              position: absolute;
+              top: 70px;
+              left: 0;
+              z-index: 1;
+              transition: 0.2s;
+              opacity: 0;
+              visibility: hidden;
+              width: 100%;
+              &.sizeRight{
+                left: auto;
+                right: 0;
+
+              }
+              @include breakpoint-min(calc-rem(768)) {
+
+
+              }
+              &.active {
+                top: 50px;
+                opacity: 1;
+                visibility: visible;
+              }
+              li {
+                padding: 6px 0;
+                white-space: nowrap;
+                color: #484848;
+                cursor: pointer;
+                margin-bottom: 6px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                &.active {
+                  color: $themeColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.productCardBox {
+  margin-bottom: 30px;
+  .imgBox {
+    padding-top: 125%;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+    }
+    .addCart{
+      background: #0D5A3E;
+      color: $color1;
+      font-size: calc-rem(14);
+      padding: 18px 10px 15px;
+      text-align: center;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      transition: 0.3s;
+      width: 100%;
+      border: 0;
+      @include breakpoint-min(calc-rem(1200)) {
+        bottom: -60px;
+      }
+    }
+  }
+  .details {
+    padding: 32px 20px;
+    background: $body-bgColor;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    @include breakpoint-min(calc-rem(768)) {
+      padding: 15px;
+    }
+    @include breakpoint-min(calc-rem(1200)) {
+      padding: 32px 20px;
+    }
+    .name {
+      font-family: "Gotham-Medium";
+      font-size: calc-rem(12);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+
+      @include breakpoint-min(calc-rem(768)) {min-height: 36px;}
+    }
+    .price {
+      font-family: "Gotham-Medium";
+      font-size: calc-rem(20);
+      text-transform: uppercase;
+      margin-bottom: 0;
+      color: #0d5a3e;
+    }
+  }
+  &:hover{
+    .addCart{
+      bottom: 0;
+    }
+  }
+}
+
+.bottomModal {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  z-index: 10;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    .modalBox{
+      bottom: 0;
+    }
+  }
+  .modalBox {
+    position: fixed;
+    bottom: -100%;
+    width: 100%;
+    background: $body-bgColor;
+    border-radius: 15px 15px 0 0;
+    font-size: 0.875rem;
+    z-index: 10;
+    transition: .3s;
+    .modalHeader {
+      display: flex;
+      align-items: center;
+      padding: 18px 20px;
+      height: 60px;
+      border-bottom: 1px solid $borderColor;
+      .actionBtn {
+        min-width: 50px;
+        .icon {
+          display: block;
+        }
+      }
+      .modalTitle {
+        flex: 1;
+        .title {
+          display: block;
+          font-family: "Gotham-Medium";
+          &.center {
+            text-align: center;
+          }
+        }
+      }
+      .resetBtnBox {
+        min-width: 50px;
+        display: flex;
+        justify-content: flex-end;
+        .resetBtn {
+          background: none;
+          border: none;
+          font-size: calc-rem(15);
+
+          &:disabled {
+
+          }
+        }
+      }
+    }
+    .modalBody {
+      padding: 10px 20px 20px;
+      max-height: calc(80vh);
+      overflow-x: scroll;
+      .modalList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          font-size: calc-rem(13);
+          border-bottom: 1px solid $borderColor;
+          padding: 15px 0;
+          position: relative;
+          font-family: "Gotham-Medium";
+          a,
+          button {
+            text-decoration: none;
+            color: $primaryColor;
+            border: none;
+            background: none;
+            font-family: "Gotham-Medium";
+            padding: 5px;
+          }
+          &.active{
+            color: $themeColor;
+          }
+          &:last-child{
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+  .overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  &.active {
+    display: block;
+    .overlay {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.5s;
+    }
+  }
+}
